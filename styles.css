@@ -1,98 +1,138 @@
 /* Global Styles */
-*{
-    padding: 0; 
-    margin: 0; 
-    box-sizing: border-box;  
-    --purp: #674BB1; 
-} 
- 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --purp: #674bb1;
+}
+
 /* Mobile styles */
 
-body{
-    background: var(--purp);
-} 
-.bg{
-    background-image: url(/images/bg-mobile.svg); 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    height: 85vh;
-    width: 100vw;  
-
-    
+body {
+  background: var(--purp);
 }
-.container{ 
-    max-width: 1440px; 
-    min-width: 345px;  
-    width: 90%;
-    margin: auto;
+.bg {
+  margin: auto;
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 420px;
+  max-width: 500px;
+  width: auto;
 }
-
-
-nav{
-    padding-top: 1.0rem;
+.container {
+  max-width: 1440px;
+  min-width: 345px;
+  width: 90%;
+  margin: auto;
 }
 
-nav .logo{
-    height: 2.5rem;
-}  
-.content-container{
-    padding-top: 3rem; 
-
+nav {
+  padding-top: 1rem;
 }
 
-.mockups{
-    height: 15rem;
-} 
+nav .logo {
+  height: 2.5rem;
+}
+.content-container {
+  padding-top: 3rem;
+}
 
-.section-a{
-    display: flex; 
-    justify-content: center;
+.mockups {
+  height: 15rem;
+}
+
+.section-a {
+  display: flex;
+  justify-content: center;
 }
 
 .section-b {
-    margin-top: 4rem;
-    color: white; 
-    font-family: Poppins, 'Courier New', Courier, monospace; 
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-}  
-
-.section-b h1{
-    font-weight: 500;
-    font-size: 1.8rem; 
-    padding-bottom: 1.2rem;
+  margin-top: 4rem;
+  color: white;
+  font-family: Poppins, "Courier New", Courier, monospace;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.section-b p{
-    width: 86%; 
-    margin:  auto;
-    font-size: 1.0rem; 
-    font-weight: 300;  
-  
-} 
-
-button{
-    margin-top: 1.2rem;
-    padding: 1rem 1.5rem; 
-    border-radius: 50px; 
-    width: 260px;
-    color: var(--purp); 
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
-    cursor: pointer; 
-    transition: color .3s;   
-    border: none;
-    font-size: 1.0rem;
-    margin-bottom: 5rem;
-} 
-
-button:hover{
-    background: #E980E7; 
-    color: white;
-} 
-
-button:focus{
-    outline: none;
+.section-b h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding-bottom: 1.2rem;
 }
 
+.section-b p {
+  width: 85%;
+  margin: auto;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+button {
+  margin-top: 1.2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  width: 260px;
+  color: var(--purp);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+  transition: color 0.3s;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+}
+
+button:hover {
+  background: #e980e7;
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 100%;
+    margin: auto;
+    max-width: 1140px;
+    min-width: 645px;
+  }
+
+  .bg {
+    /* new stuff */
+    background-image: url(/images/bg-desktop.svg);
+    max-width: 1140px;
+    width: 1024px;
+    height: 100vh;
+    position: relative;
+  }
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .mockups {
+    width: auto;
+    height: 25rem;
+  }
+  .section-b {
+    width: 560px;
+    text-align: left;
+    align-items: flex-start;
+    /* position: relative; */
+  }
+  .section-b p {
+    margin: 0;
+    text-align: left;
+  }
+  .section-b img {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+  }
+}
